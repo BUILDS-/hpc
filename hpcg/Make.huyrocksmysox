@@ -82,9 +82,9 @@ BINdir       = $(TOPdir)/bin
 # header files,  MPlib  is defined  to be the name of  the library to be
 # used. The variable MPdir is only used for defining MPinc and MPlib.
 #
-MPdir        = 
-MPinc        = 
-MPlib        = 
+MPdir        = /nfs/mpich2
+MPinc        = -L$(MPdir)/include
+MPlib        = $(MPdir)/lib/libmpi.a
 #
 #
 # ----------------------------------------------------------------------
