@@ -17,6 +17,9 @@ There are two branches:
 * **dnn_cvtk_src**
 	Validation code
 
+## Optimizations
+
+#### Compiler Change
 We change the compiler from the line:
 
 	GCC = g++
@@ -26,6 +29,10 @@ To:
 	GCC = icc
 
 To better take advantage of the intel compiler optimizations.
+
+#### MPI Paralellization
+
+To come
 
 More explanation can be found here: http://asc-events.org/ASC16/Preliminary.php
  
