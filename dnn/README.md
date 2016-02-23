@@ -20,7 +20,7 @@ There are two branches:
 ## Optimizations
 
 #### Compiler Change
-We change the compiler from the line:
+We changed the compiler from the line:
 
 	GCC = g++
 
@@ -32,7 +32,7 @@ To better take advantage of the intel compiler optimizations.
 
 #### MPI Paralellization
 
-To come
+To come...
 
 More explanation can be found here: http://asc-events.org/ASC16/Preliminary.php
  
