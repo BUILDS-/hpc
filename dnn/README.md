@@ -1,14 +1,13 @@
 # DNN
 
-To run, run:
+To run:
 	
 	sh train.sh
 
-We're putting results in a `output_file`:
+Results are logged to `mlp.0.log`:
 
-	sh train.sh > output_file &
-
-Then we get output in `mlp.0.log`
+|Optimization|Running Speed|
+|None |383427.000000ms|
 
 There are two branches:
 
