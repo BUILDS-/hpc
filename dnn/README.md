@@ -6,8 +6,9 @@ To run:
 
 Results are logged to `mlp.0.log`:
 
-|Optimization|Running Speed|
-|None |383427.000000ms|
+| Optimization | Running Speed |
+| --- | --- |
+| None | 383427.000000ms |
 
 There are two branches:
 
