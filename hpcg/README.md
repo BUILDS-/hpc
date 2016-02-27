@@ -22,8 +22,8 @@ tar -xvf hpcg-3.0.tar.gz
 
 ### Makefile
 
-### huyrocksmysox
-We based our makefile off Make.Linux_MPI from the hpcg-3.0 source. We copied it as Make.huyrocksmysox. To customize, we linked the MPI libraries properly as they were configured on the 6 node cluster.
+### MPI
+We based our makefile off Make.Linux_MPI from the hpcg-3.0 source. We copied it as Make.MPI. To customize, we linked the MPI libraries properly as they were configured on the 6 node cluster.
 
 ### Install/Setup Instructions
 We first downloaded the tar source into our NFS folder on our MPI enabled 6 node cluster. After extracting the source, we used the following commands for setup:
@@ -31,23 +31,21 @@ We first downloaded the tar source into our NFS folder on our MPI enabled 6 node
 ```
 cd hpcg-3.0/
 mkdir build
-cp ../hpc/hpcg/Make.huyrocksmysox setup/
+cp ../hpc/hpcg/Make.MPI setup/
 cd build/
-/nfs/hpcg-3.0/configure huyrocksmysox
+/nfs/hpcg-3.0/configure MPI
 make
 ```
 
 ### Performance
 Mesh sizes must be divisible by 8.
 
-| Cluster       | Version       | Mesh Size   | Cores | GFLOP/s |
-|---------------|---------------|-------------|-------|---------|
-| 6 x86 nodes   | 3.0 Source    | 104         | 6     | 1.31751 |
-| 6 x86 nodes   | 3.0 Source    | 16          | 4     | 1.17194 |
-| 6 x86 nodes   | 3.0 Source    | 16          | 6     | 2.3234  |
-| 6 x86 nodes   | 3.0 Source    | 16          | 24    | 3.38351 |
-| 6 x86 nodes   | 3.0 Source    | 32          | 24    | 3.43043 |
-| 6 x86 nodes   | 3.0 Source    | 48          | 24    | 3.44794 |
-| 6 x86 nodes   | 3.0 Source    | 56          | 24    | 3.44749 |
-
-
+| Cluster       | Version       | Mesh Size   | Cores | GFLOP/s | Type  |
+|---------------|---------------|-------------|-------|---------|-------|
+| 6 x86 nodes   | 3.0 Source    | 104         | 6     | 1.31751 | MPI   |
+| 6 x86 nodes   | 3.0 Source    | 16          | 4     | 1.17194 | MPI   |
+| 6 x86 nodes   | 3.0 Source    | 16          | 6     | 2.3234  | MPI   |
+| 6 x86 nodes   | 3.0 Source    | 16          | 24    | 3.38351 | MPI   |
+| 6 x86 nodes   | 3.0 Source    | 32          | 24    | 3.43043 | MPI   |
+| 6 x86 nodes   | 3.0 Source    | 48          | 24    | 3.44794 | MPI   |
+| 6 x86 nodes   | 3.0 Source    | 56          | 24    | 3.44749 | MPI   |
