@@ -1,5 +1,11 @@
 # hpcg
 
+### Run
+
+```
+mpirun -n 24 -f /root/nfs/hosts ./xhpcg --nx=16 --rt=3600
+```
+
 ### Cluster Specs
 
 | Cluster       | CPU                                   | Cores | Accelerator  |
@@ -40,12 +46,11 @@ make
 ### Performance
 Mesh sizes must be divisible by 8.
 
-| Cluster       | Version       | Mesh Size   | Cores | GFLOP/s | Type  |
-|---------------|---------------|-------------|-------|---------|-------|
-| 6 x86 nodes   | 3.0 Source    | 104         | 6     | 1.31751 | MPI   |
-| 6 x86 nodes   | 3.0 Source    | 16          | 4     | 1.17194 | MPI   |
-| 6 x86 nodes   | 3.0 Source    | 16          | 6     | 2.3234  | MPI   |
-| 6 x86 nodes   | 3.0 Source    | 16          | 24    | 3.38351 | MPI   |
-| 6 x86 nodes   | 3.0 Source    | 32          | 24    | 3.43043 | MPI   |
-| 6 x86 nodes   | 3.0 Source    | 48          | 24    | 3.44794 | MPI   |
-| 6 x86 nodes   | 3.0 Source    | 56          | 24    | 3.44749 | MPI   |
+| Cluster       | Version       | Mesh Size   | Cores | GFLOP/s | Type        |
+|---------------|---------------|-------------|-------|---------|-------------|
+| 6 x86 nodes   | 3.0 Source    | 104         | 6     | 1.31751 | MPI         |
+| 6 x86 nodes   | 3.0 Source    | 16          | 4     | 1.17194 | MPI         |
+| 6 x86 nodes   | 3.0 Source    | 16          | 6     | 2.3234  | MPI         |
+| 6 x86 nodes   | 3.0 Source    | 16          | 24    | 3.44749 | MPI         |
+| 6 x86 nodes   | 3.0 Source    | 16          | 24    | 3.39781 | MPI_OPENMPI |
+| 6 x86 nodes   | 3.0 Source    | 48          | 24    | 2.31746 | MPI_OPENMPI |
