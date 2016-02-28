@@ -9,7 +9,7 @@ Results are logged to `mlp.0.log`:
 | Optimization | Running Speed | Percent Increase |
 | --- | --- | --- |
 | None | 421780.000000ms | 0% |
-| Intel Compiler | 383427.000000ms | 90% |
+| Intel Compiler | 383427.000000ms | 10% |
 
 There are two branches:
 
