@@ -43,7 +43,7 @@ cd build/
 make
 ```
 
-### Performance
+### Benchmarking Performance - 60 seconds
 Mesh sizes must be divisible by 8.
 
 | Cluster       | Version       | Mesh Size   | Cores | GFLOP/s | Type        |
@@ -53,4 +53,13 @@ Mesh sizes must be divisible by 8.
 | 6 x86 nodes   | 3.0 Source    | 16          | 6     | 2.3234  | MPI         |
 | 6 x86 nodes   | 3.0 Source    | 16          | 24    | 3.44749 | MPI         |
 | 6 x86 nodes   | 3.0 Source    | 16          | 24    | 3.39781 | MPI_OPENMPI |
+| 6 x86 nodes   | 3.0 Source    | 24          | 24    | 3.10402 | MPI_OPENMPI |
+| 6 x86 nodes   | 3.0 Source    | 32          | 24    | 3.02452 | MPI_OPENMPI |
 | 6 x86 nodes   | 3.0 Source    | 48          | 24    | 2.31746 | MPI_OPENMPI |
+| 6 x86 nodes   | 3.0 Source    | 112         | 24    | 2.815   | MPI_OPENMPI |
+
+### Benchmarking Performance - 1 hour
+
+| Cluster       | Version       | Mesh Size   | Cores | GFLOP/s | Type        |
+|---------------|---------------|-------------|-------|---------|-------------|
+| 6 x86 nodes   | 3.0 Source    | 16          | 24    | 3.48752 | MPI_OPENMPI |
