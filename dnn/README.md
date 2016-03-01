@@ -4,7 +4,7 @@ To run:
 	
 	sh train.sh
 
-Results are logged to `mlp.0.log`:
+Results are logged to `mlp.0.log` and `mlp_cv.0.log`.
 
 | Optimization | Running Speed | Percent Increase |
 | --- | --- | --- |
