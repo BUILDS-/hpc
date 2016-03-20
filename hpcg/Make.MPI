@@ -83,7 +83,7 @@ BINdir       = $(TOPdir)/bin
 # used. The variable MPdir is only used for defining MPinc and MPlib.
 #
 MPdir        = /nfs/mpich2
-MPinc        = -L$(MPdir)/include
+MPinc        = -I$(MPdir)/include
 MPlib        = $(MPdir)/lib/libmpi.a
 #
 #

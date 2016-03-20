@@ -15,9 +15,9 @@ mpirun -n 24 -f /root/nfs/hosts ./xhpcg --nx=16 --rt=3600
 
 ### Version
 
-| Cluster       | Version       |
-|---------------|---------------|
-| 6 x86 nodes   | 3.0 Source    |
+| Cluster       | HPCG Version  | MPICH Version |Intel MPI   |
+|---------------|---------------|---------------|------------|
+| 6 x86 nodes   | 3.0 Source    | 3.2           |5.1.3       |
 
 ```
 # Download and extract instructions
@@ -57,6 +57,9 @@ Mesh sizes must be divisible by 8.
 | 6 x86 nodes   | 3.0 Source    | 32          | 24    | 3.02452 | MPI_OPENMPI |
 | 6 x86 nodes   | 3.0 Source    | 48          | 24    | 2.31746 | MPI_OPENMPI |
 | 6 x86 nodes   | 3.0 Source    | 112         | 24    | 2.815   | MPI_OPENMPI |
+| 5 x86 nodes   | 3.0 Source    | 16          | 20    | 3.11515 | ICPC        |
+| 5 x86 nodes   | 3.0 Source    | 24          | 20    | 2.61601 | ICPC        |
+| 5 x86 nodes   | 3.0 Source    | 104         | 20    | 2.34242 | ICPC        |
 
 ### Benchmarking Performance - 1 hour
 

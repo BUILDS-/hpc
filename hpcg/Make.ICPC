@@ -82,7 +82,7 @@ BINdir       = $(TOPdir)/bin
 # header files,  MPlib  is defined  to be the name of  the library to be
 # used. The variable MPdir is only used for defining MPinc and MPlib.
 #
-MPdir        = /nfs/mpich2
+MPdir        = /opt/intel/compilers_and_libraries_2016.2.181/linux/mpi/intel64
 MPinc        = -I$(MPdir)/include
 MPlib        = $(MPdir)/lib/libmpi.a
 #
@@ -96,7 +96,7 @@ HPCG_LIBS     =
 #
 # - Compile time options -----------------------------------------------
 #
-# -DHPCG_NO_MPI	        Define to disable MPI
+# -DHPCG_NO_MPI		Define to disable MPI
 # -DHPCG_NO_OPENMP	Define to disable OPENMP
 # -DHPCG_DEBUG       	Define to enable debugging output
 # -DHPCG_DETAILED_DEBUG Define to enable very detailed debugging output
@@ -106,18 +106,18 @@ HPCG_LIBS     =
 #    *) Build with OpenMP enabled.
 #    *) Not generate debugging output.
 #
-HPCG_OPTS     =
+HPCG_OPTS     = 
 #
 # ----------------------------------------------------------------------
 #
-HPCG_DEFS     = $(HPCG_OPTS) $(HPCG_INCLUDES)
+HPCG_DEFS     = $(HPCG_OPTS) $(HPCG_INCLUDES) -DMPICH_IGNORE_CXX_SEEK
 #
 # ----------------------------------------------------------------------
 # - Compilers / linkers - Optimization flags ---------------------------
 # ----------------------------------------------------------------------
 #
-CXX          = mpicxx
-CXXFLAGS     = $(HPCG_DEFS) -O3 -ffast-math -ftree-vectorize -ftree-vectorizer-verbose=0 -fopenmp
+CXX          = mpiicpc
+CXXFLAGS     = $(HPCG_DEFS) -O3 -openmp
 #
 LINKER       = $(CXX)
 LINKFLAGS    = $(CXXFLAGS)
